@@ -3,7 +3,7 @@
     <string name="txt_titulo">Aplicativo Lista VIP</string>
     <string name="txt_hint_edit_primeiro_nome">Primeiro Nome</string>
     <string name="txt_hint_edir_sobrenome">Sobrenome</string>
-    <string name="tex_hint_edit_nome_curso">Nome</string>
+    <string name="tex_hint_edit_nome_curso">Nome do Curso Desejado</string>
     <string name="txt_hint_edir_telefone_de_contato">Telefone de Contato</string>
     <string name="txt_button_limpar">LIMPAR</string>
     <string name="txt_button_salvar">SALVAR</string>
