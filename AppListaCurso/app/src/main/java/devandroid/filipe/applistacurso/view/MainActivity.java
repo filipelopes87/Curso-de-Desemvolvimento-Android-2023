@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
         dadosOutraPessoa += " Telefone de Contato: ";
         dadosOutraPessoa += outraPessoa.getTelefoneContato();
 
-
-
-
     }
+
 }
