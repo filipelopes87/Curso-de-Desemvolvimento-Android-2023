@@ -42,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         pessoa.setCursoDesejado("Android");
         pessoa.setTelefoneContato("16 991288574");
 
-        outraPessoa = new Pessoa();
+        /*outraPessoa = new Pessoa();
         outraPessoa.setPrimeiroNome("Paulo");
         outraPessoa.setSobreNome("Rocha");
         outraPessoa.setCursoDesejado("Java");
-        outraPessoa.setTelefoneContato("16 885285525");
+        outraPessoa.setTelefoneContato("16 885285525");*/
 
         editTextPrimeiroNome = findViewById(R.id.editTextPrimeiroNome);
         editTextsobreNome = findViewById(R.id.editTextsobreNome);
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                             }
                                         });
 
-
+/*
         dadosPessoa = "Primeiro Nome: ";
         dadosPessoa += pessoa.getPrimeiroNome();
         dadosPessoa += " Sobrenome: ";
@@ -110,11 +110,11 @@ public class MainActivity extends AppCompatActivity {
         dadosOutraPessoa += " Curso Desejado; ";
         dadosOutraPessoa += outraPessoa.getCursoDesejado();
         dadosOutraPessoa += " Telefone de Contato: ";
-        dadosOutraPessoa += outraPessoa.getTelefoneContato();
+        dadosOutraPessoa += outraPessoa.getTelefoneContato();*/
 
         // Outra maneira de lançar o que tiver acima
         Log.i("PooAndroid",pessoa.toString());
-        Log.i("PooAndroid",outraPessoa.toString());
+        //Log.i("PooAndroid",outraPessoa.toString());
 
     }
 
