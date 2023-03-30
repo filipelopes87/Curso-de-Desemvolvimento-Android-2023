@@ -26,11 +26,11 @@
         android:layout_margin="16dp"
         android:ems="10"
         android:hint="@string/txt_hint_edit_primeiro_nome"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTituloApp"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/textTituloApp" />
 
     <EditText
         android:id="@+id/editTextsobreNome"
