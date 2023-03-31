@@ -19,54 +19,61 @@ public class MainActivity extends AppCompatActivity {
     public static final String NOME_PREFERENCES = "pref_listaVip";
     PessoaController controller;
     Pessoa pessoa;
-    Pessoa outraPessoa;
-    EditText editTextPrimeiroNome;
-    EditText editTextsobreNome;
-    EditText editTextnomeDocurso;
-    EditText editTextTelefoneContato;
+    EditText editPrimeiroNome;
+    EditText editsobreNome;
+    EditText editnomeDocurso;
+    EditText editTelefoneContato;
     Button buttonLimpar;
     Button buttonSalvar;
     Button buttonFinalizar;
+
+    //Comentário
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        preferences = getSharedPreferences(NOME_PREFERENCES,0);
+        preferences = getSharedPreferences(NOME_PREFERENCES, 0);
         SharedPreferences.Editor listaVIp = preferences.edit();
 
         controller = new PessoaController();
         controller.toString();
 
         pessoa = new Pessoa();
-        pessoa.setPrimeiroNome("Filipe");
-        pessoa.setSobreNome("Lopes");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setTelefoneContato("16 991288574");
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome","NA"));
+        pessoa.setPrimeiroNome(preferences.getString("sobreNome","NA"));
+        pessoa.setPrimeiroNome(preferences.getString("cursoDesejado","NA"));
+        pessoa.setPrimeiroNome(preferences.getString("telefoneContato","NA"));
 
-        outraPessoa = new Pessoa();
 
-        editTextPrimeiroNome = findViewById(R.id.editTextPrimeiroNome);
-        editTextsobreNome = findViewById(R.id.editTextsobreNome);
-        editTextnomeDocurso = findViewById(R.id.editTextnomeDocurso);
-        editTextTelefoneContato = findViewById(R.id.editTextTelefoneContato);
+        editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
+        editsobreNome = findViewById(R.id.editsobreNome);
+        editnomeDocurso = findViewById(R.id.editnomeDocurso);
+        editTelefoneContato = findViewById(R.id.editTelefoneContato);
+
+        editPrimeiroNome.setText(pessoa.getPrimeiroNome());
+        editsobreNome.setText(pessoa.getSobreNome());
+        editnomeDocurso.setText(pessoa.getCursoDesejado());
+        editTelefoneContato.setText(pessoa.getTelefoneContato());
+
         buttonSalvar = findViewById(R.id.buttonSalvar);
         buttonLimpar = findViewById(R.id.buttonLimpar);
         buttonFinalizar = findViewById(R.id.buttonFinalizar);
 
-        editTextPrimeiroNome.setText(pessoa.getPrimeiroNome());
-        editTextsobreNome.setText(pessoa.getSobreNome());
-        editTextnomeDocurso.setText(pessoa.getCursoDesejado());
-        editTextTelefoneContato.setText(pessoa.getTelefoneContato());
+        editPrimeiroNome.setText(pessoa.getPrimeiroNome());
+        editsobreNome.setText(pessoa.getSobreNome());
+        editnomeDocurso.setText(pessoa.getCursoDesejado());
+        editTelefoneContato.setText(pessoa.getTelefoneContato());
+
 
         buttonLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editTextPrimeiroNome.setText("");
-                editTextsobreNome.setText("");
-                editTextnomeDocurso.setText("");
-                editTextTelefoneContato.setText("");
+                editPrimeiroNome.setText("");
+                editsobreNome.setText("");
+                editnomeDocurso.setText("");
+                editTelefoneContato.setText("");
             }
         });
 
@@ -82,17 +89,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                pessoa.setPrimeiroNome(editTextPrimeiroNome.getText().toString());
-                pessoa.setSobreNome(editTextsobreNome.getText().toString());
-                pessoa.setCursoDesejado(editTextnomeDocurso.getText().toString());
-                pessoa.setTelefoneContato(editTextTelefoneContato.getText().toString());
+                pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
+                pessoa.setSobreNome(editsobreNome.getText().toString());
+                pessoa.setCursoDesejado(editnomeDocurso.getText().toString());
+                pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo com Sucesso", Toast.LENGTH_LONG).show();
 
-                listaVIp.putString("primeiroNome",pessoa.getPrimeiroNome());
-                listaVIp.putString("sobreNome",pessoa.getSobreNome());
-                listaVIp.putString("cursoDesejado",pessoa.getCursoDesejado());
-                listaVIp.putString("telefoneContato",pessoa.getTelefoneContato());
+                listaVIp.putString("primeiroNome", pessoa.getPrimeiroNome());
+                listaVIp.putString("sobreNome", pessoa.getSobreNome());
+                listaVIp.putString("cursoDesejado", pessoa.getCursoDesejado());
+                listaVIp.putString("telefoneContato", pessoa.getTelefoneContato());
                 listaVIp.apply();
 
                 controller.salvar(pessoa);
@@ -100,6 +107,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.i("PooAndroid", pessoa.toString());
-        Log.i("PooAndroid", outraPessoa.toString());
     }
 }
