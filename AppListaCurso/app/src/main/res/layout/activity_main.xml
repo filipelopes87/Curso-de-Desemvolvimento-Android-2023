@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.056" />
 
     <EditText
-        android:id="@+id/editTextPrimeiroNome"
+        android:id="@+id/editPrimeiroNome"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -30,10 +30,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTituloApp" />
+        app:layout_constraintTop_toBottomOf="@+id/editPrimeiroNome"
+        tools:ignore="NotSibling" />
 
     <EditText
-        android:id="@+id/editTextsobreNome"
+        android:id="@+id/editsobreNome"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -42,10 +43,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPrimeiroNome" />
+        app:layout_constraintTop_toBottomOf="@+id/editsobreNome"
+        tools:ignore="NotSibling" />
 
     <EditText
-        android:id="@+id/editTextnomeDocurso"
+        android:id="@+id/editnomeDocurso"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -54,10 +56,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextsobreNome" />
+        app:layout_constraintTop_toBottomOf="@+id/editnomeDocurso"
+        tools:ignore="NotSibling" />
 
     <EditText
-        android:id="@+id/editTextTelefoneContato"
+        android:id="@+id/editTelefoneContato"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="16dp"
@@ -66,7 +69,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextnomeDocurso" />
+        app:layout_constraintTop_toBottomOf="@+id/editTelefoneContato"
+        tools:ignore="NotSibling" />
 
     <Button
         android:id="@+id/buttonLimpar"
@@ -77,7 +81,6 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonSalvar"
         app:layout_constraintHorizontal_bias="0.276"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTelefoneContato"
         app:layout_constraintVertical_bias="0.505" />
 
     <Button
@@ -88,7 +91,6 @@
         android:text="@string/txt_button_salvar"
         app:layout_constraintBottom_toTopOf="@+id/buttonFinalizar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTelefoneContato"
         app:layout_constraintVertical_bias="0.505" />
 
     <Button
@@ -101,7 +103,6 @@
         android:text="@string/txt_button_finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTelefoneContato"
         app:layout_constraintVertical_bias="0.357" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
