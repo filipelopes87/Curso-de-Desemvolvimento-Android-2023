@@ -40,25 +40,24 @@ public class MainActivity extends AppCompatActivity {
         controller.toString();
 
         pessoa = new Pessoa();
-        pessoa.setPrimeiroNome("Filipe");
-        pessoa.setSobreNome("Lopes");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setTelefoneContato("16 991288574");
-
-        outraPessoa = new Pessoa();
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome","NA"));
+        pessoa.setSobreNome(preferences.getString("sobreNome","NA"));
+        pessoa.setCursoDesejado(preferences.getString("cursoDesejado","NA"));
+        pessoa.setTelefoneContato(preferences.getString("telefoneContato","NA"));
 
         editTextPrimeiroNome = findViewById(R.id.editTextPrimeiroNome);
         editTextsobreNome = findViewById(R.id.editTextsobreNome);
         editTextnomeDocurso = findViewById(R.id.editTextnomeDocurso);
         editTextTelefoneContato = findViewById(R.id.editTextTelefoneContato);
-        buttonSalvar = findViewById(R.id.buttonSalvar);
-        buttonLimpar = findViewById(R.id.buttonLimpar);
-        buttonFinalizar = findViewById(R.id.buttonFinalizar);
 
         editTextPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editTextsobreNome.setText(pessoa.getSobreNome());
         editTextnomeDocurso.setText(pessoa.getCursoDesejado());
         editTextTelefoneContato.setText(pessoa.getTelefoneContato());
+
+        buttonSalvar = findViewById(R.id.buttonSalvar);
+        buttonLimpar = findViewById(R.id.buttonLimpar);
+        buttonFinalizar = findViewById(R.id.buttonFinalizar);
 
         buttonLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +99,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.i("PooAndroid", pessoa.toString());
-        Log.i("PooAndroid", outraPessoa.toString());
     }
 }
