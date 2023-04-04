@@ -21,9 +21,6 @@ public class PessoaController {
         listaVIp = preferences.edit();
     }
 
-
-
-
     @NonNull
     @Override
     public String toString() {
