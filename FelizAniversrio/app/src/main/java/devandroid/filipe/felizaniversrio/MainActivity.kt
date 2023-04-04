@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background,
                     ) {
-                    BirthdayGreetingWithImage(message = getString(R.string.feliz_aniversario_text), from = stringResource(
+                    BirthdayGreetingWithImage(message = stringResource(R.string.feliz_aniversario_text), from = stringResource(
                                             R.string.from_Emma_text)
                     )
                 }
@@ -47,7 +47,7 @@ fun BirthdayGreetingWithText(message: String, from: String, modifier: Modifier =
     ) {
         Text(
             text = message,
-            fontSize = 36.sp,
+            fontSize = 30.sp,
             modifier = Modifier
                 .padding(top = 16.dp)
         )
